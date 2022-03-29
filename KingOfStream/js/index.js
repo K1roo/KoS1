@@ -11,6 +11,7 @@ function generate(index) {
     document.getElementById("optt3").innerHTML = jsonData[index].opt3;
 }
 
+
 function checkAnswer() {
     if (document.getElementById("opt1").checked && jsonData[i].opt1 == jsonData[i].answer) {
        correctCount++;
@@ -21,6 +22,7 @@ function checkAnswer() {
     if (document.getElementById("opt3").checked && jsonData[i].opt3 == jsonData[i].answer) {
         correctCount++;
     }
+
     // increment i for next question
     i++;
     if(jsonData.length-1 < i){
@@ -28,6 +30,7 @@ function checkAnswer() {
         document.write("<div style='color:#ffffff;font-size:18pt;text-align:center;'>*****Your score is : "+correctCount+"*****</div>");
         document.write("</body>");
     }
+
     // callback to generate
     generate(i);
 }
